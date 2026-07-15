@@ -150,6 +150,13 @@
   }
   .proj ul{padding-left:18px; color:#3A4359; font-size:14.5px;}
   .proj li{margin-bottom:4px;}
+  .repo-link{
+    display:inline-flex; align-items:center; gap:6px; margin-top:12px;
+    font-family:var(--mono); font-size:12.5px; color:var(--cobalt); text-decoration:none;
+    border:1px solid var(--line-soft); padding:6px 12px; border-radius:6px;
+  }
+  .repo-link:hover{border-color:var(--cobalt); background:var(--paper-dim);}
+  .repo-link svg{width:13px; height:13px;}
 
   /* ---------- FORMATION timeline ---------- */
   .timeline{position:relative; padding-left:26px;}
@@ -216,8 +223,8 @@
 
 <section class="hero wrap">
   <div class="status"><span class="dot"></span> disponible pour un stage</div>
-  <h1>Ibrahima Sylla<br><span class="accent">Systèmes &amp; applications.</span></h1>
-  <div class="hero-role">Master 1 Système d'Information (SI/SR) — UFR SATIC, UADB</div>
+  <h1>Ibrahima Sylla<br><span class="accent">Systèmes d'Information.</span></h1>
+  <div class="hero-role">Master 1 Système d'Information SI — UFR SATIC, UADB</div>
   <p class="lede">Je conçois et déploie des systèmes complets — du backend distribué à l'interface — en m'appuyant sur une pratique concrète des microservices, du cloud-native et des bases de données réparties.</p>
   <div class="hero-cta">
     <a class="btn primary" href="#projets">Voir les projets</a>
@@ -260,7 +267,7 @@
   <div class="eyebrow">~/profil</div>
   <h2 class="title">Qui je suis</h2>
   <p class="profil-text">
-    Étudiant en Master 1 Système d'Information / Systèmes et Réseaux à l'UADB, titulaire d'une Licence en
+    Étudiant en Master 1 Système d'Information  à l'UADB, titulaire d'une Licence en
     Développement d'Administration et d'Application (D2A). J'ai construit ma pratique à travers une dizaine
     de projets universitaires — souvent déployés en conditions réelles — couvrant le développement full-stack,
     les architectures orientées services, les bases de données distribuées et le DevOps. Rigoureux, curieux
@@ -329,18 +336,27 @@
           <li>Frontend React connecté aux services via API</li>
           <li>Orchestration complète des conteneurs ; déployé en conditions réelles</li>
         </ul>
+        <a class="repo-link" href="https://github.com/ibrahimasylla-creator/quincaillerie-app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Voir sur GitHub
+        </a>
       </div>
     </div>
     <div class="proj">
       <div class="proj-idx">02</div>
       <div>
-        <h3>Base de données distribuée — bibliothèques UADB–UIDT</h3>
-        <span class="stack">FastAPI · PostgreSQL · Fragmentation horizontale · 2PC</span>
+        <h3>Infrastructure réseau multi-VM sécurisée</h3>
+        <span class="stack">iptables · Nginx · Node.js · MySQL · Segmentation réseau</span>
         <ul>
-          <li>Base distribuée reliant les bibliothèques de deux universités</li>
-          <li>Fragmentation horizontale sur deux nœuds PostgreSQL</li>
-          <li>Protocole de validation en deux phases (Two-Phase Commit)</li>
+          <li>VM Firewall : routage et sécurité via iptables</li>
+          <li>VM Web : serveur Node.js + Nginx en zone DMZ (192.168.100.0/24)</li>
+          <li>Base de données MySQL isolée en zone LAN (192.168.10.0/24)</li>
+          <li>Politique de sécurité réseau configurée manuellement entre les zones DMZ et LAN</li>
         </ul>
+        <a class="repo-link" href="https://github.com/ibrahimasylla-creator/Projet-Final-Cloud-UADB" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Voir sur GitHub
+        </a>
       </div>
     </div>
     <div class="proj">
@@ -363,6 +379,10 @@
           <li>Contrôle d'accès basé sur les rôles (4 niveaux)</li>
           <li>Paiements mobiles, notifications, rapports PDF, calcul d'arriérés</li>
         </ul>
+        <a class="repo-link" href="https://github.com/ibrahimasylla-creator/AGFA" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Voir sur GitHub
+        </a>
       </div>
     </div>
     <div class="proj">
@@ -373,17 +393,26 @@
         <ul>
           <li>Projet d'équipe ; couche de présentation en charge</li>
         </ul>
+        <a class="repo-link" href="https://github.com/ibrahimasylla-creator/CampusPulse" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Voir sur GitHub
+        </a>
       </div>
     </div>
     <div class="proj">
       <div class="proj-idx">06</div>
       <div>
-        <h3>Cluster Kubernetes Master/Worker</h3>
-        <span class="stack">Kubernetes · Ansible · WSL2</span>
+        <h3>Système Réparti — Ma Boutique Répartie</h3>
+        <span class="stack">React · Flask · PostgreSQL · Microservices</span>
         <ul>
-          <li>Cluster réparti sur machine physique Linux + nœud WSL2</li>
-          <li>Résolution d'isolation réseau (NAT) au join des nœuds</li>
+          <li>Conception et déploiement d'une architecture microservices moderne</li>
+          <li>Frontend React connecté à un backend Flask</li>
+          <li>Base de données PostgreSQL</li>
         </ul>
+        <a class="repo-link" href="https://github.com/syllaibrahi/SystemeReparti_Projet_2026" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Voir sur GitHub
+        </a>
       </div>
     </div>
   </div>
